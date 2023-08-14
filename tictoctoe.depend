@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1692014012 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\board.cpp
+	"board.h"
+
+1692017659 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\board.h
+	<utility>
+	"SDL.h"
+
+1692014304 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\button.cpp
+	"button.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\button.h
+	"texture.h"
+	"graphics.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\texture.h
+	<stdio.h>
+	"SDL.h"
+	"SDL_image.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\graphics.h
+	<stdio.h>
+	"SDL.h"
+	"SDL_image.h"
+
+1692014790 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\game.cpp
+	"game.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\game.h
+	"graphics.h"
+	"texture.h"
+	"gameState.h"
+	"intro.h"
+	"title.h"
+	"play.h"
+	"gameOver.h"
+	"mixer.h"
+	"playBot.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\gamestate.h
+	"SDL.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\intro.h
+	"texture.h"
+	"gameState.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\title.h
+	"gameState.h"
+	"texture.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\play.h
+	<stdlib.h>
+	"gameState.h"
+	"texture.h"
+	"board.h"
+	"graphics.h"
+	"button.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\gameover.h
+	"gameState.h"
+	"texture.h"
+
+1692012609 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\mixer.h
+	<stdio.h>
+	"SDL.h"
+	"SDL_mixer.h"
+	<string>
+
+1692017659 c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\playbot.h
+	<stdlib.h>
+	<iostream>
+	"gameState.h"
+	"texture.h"
+	"board.h"
+	"graphics.h"
+	"button.h"
+
+1692014944 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\gameover.cpp
+	"gameOver.h"
+
+1692015188 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\graphics.cpp
+	"graphics.h"
+	"texture.h"
+
+1692015313 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\intro.cpp
+	"intro.h"
+
+1692015378 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\main.cpp
+	"game.h"
+	"gameState.h"
+	<iostream>
+
+1692015551 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\mixer.cpp
+	"mixer.h"
+	"graphics.h"
+
+1692015992 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\play.cpp
+	"play.h"
+
+1692018941 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\playbot.cpp
+	"playBot.h"
+	<vector>
+	<ctime>
+	<cstdlib>
+
+1692012609 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\texture.cpp
+	"texture.h"
+	"graphics.h"
+
+1692012609 source:c:\users\lenovo\desktop\university\c++\tictoctoe\tic-toc-toe\title.cpp
+	"title.h"
+

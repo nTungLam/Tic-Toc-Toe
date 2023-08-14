@@ -1,8 +1,6 @@
 
 #include "playBot.h"
-#include <ctime>
-#include <cstdlib>
-
+#include<vector>
 PlayBot::PlayBot(Graphics& graphics)
 {
 
@@ -100,6 +98,7 @@ void PlayBot::declareWinner(Graphics &graphics)
     SDL_RenderPresent(graphics.getRenderer());
     SDL_Delay(1000);
 }
+
 void PlayBot::bot_Move()
 {    botMove.positionID = -1;
     if( board.checkBoard(4)==EMPTY_SPACE && (board.checkBoard(0) == PLAYER_X ||board.checkBoard(1) == PLAYER_X || board.checkBoard(2) == PLAYER_X||board.checkBoard(3) == PLAYER_X||
@@ -171,7 +170,35 @@ void PlayBot::bot_Move()
 
 
 }
+/*
+void PlayBot::bot_Move()
+{
 
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+
+    std::vector<int> availablePositions;
+    for (int i = 0; i < TOTAL_POSITIONS; i++)
+    {
+        if (board.checkBoard(i) == EMPTY_SPACE)
+        {
+            availablePositions.push_back(i);
+        }
+    }
+
+
+    if (!availablePositions.empty())
+    {
+        int randomIndex = rand() % availablePositions.size();
+        botMove = board.getPositionsOnBoard()[availablePositions[randomIndex]];
+    }
+    else
+    {
+
+        botMove.positionID = -1;
+    }
+}
+*/
 
 void PlayBot::handleEvents(SDL_Event &e)
 {
@@ -233,6 +260,36 @@ void PlayBot::handleEvents(SDL_Event &e)
 
     }
 }
+/*
+void PlayBot::handleEvents(SDL_Event &e)
+{
+    while (SDL_PollEvent(&e))
+    {
+        for (int i = 0; i < TOTAL_POSITIONS; i++)
+        {
+            buttons[i].handleEvent(e);
+        }
+
+        if (e.type == SDL_QUIT)
+        {
+            requestStateChange(STATE_EXIT);
+        }
+        else if (e.type == SDL_MOUSEBUTTONDOWN)
+        {
+            int clickedPosition = whichButtonWasPressed();
+            if (clickedPosition != OUTSIDE_BOARD)
+            {
+                if (board.isValidMove(clickedPosition))
+                {
+                    playerMove = board.getPositionsOnBoard()[clickedPosition];
+                    bot_Move(); // Calculate bot's move
+                }
+            }
+        }
+    }
+}
+
+*/
 void PlayBot::logic()
 {
 
@@ -262,6 +319,46 @@ void PlayBot::logic()
     }
 
 }
+/*
+void PlayBot::logic()
+{
+    if (gameOver)
+    {
+        requestStateChange(STATE_GAME_OVER);
+    }
+    else
+    {
+        if (turn == PLAYER_X)
+        {
+            if (board.isValidMove(playerMove.positionID))
+            {
+                board.makeMove(playerMove.positionID, turn);
+                if (board.isGameOver())
+                {
+                    gameOver = true;
+                }
+                else
+                {
+                    switchTurns();
+                    bot_Move(); // Calculate bot's move after player's move
+                    if (board.isValidMove(botMove.positionID))
+                    {
+                        board.makeMove(botMove.positionID, turn);
+                        if (board.isGameOver())
+                        {
+                            gameOver = true;
+                        }
+                        else
+                        {
+                            switchTurns();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+*/
 
 void PlayBot::render(Graphics &graphics)
 {
